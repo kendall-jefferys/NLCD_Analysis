@@ -20,3 +20,14 @@ vepPolygon <- polygon_from_extent(raster::extent(672800, 740000, 4102000, 417000
 ```
 
 
+```{r get_NLCD_2011}
+NLCD_2011 <- get_nlcd(template = vepPolygon,
+                 year = 2011,
+                 dataset = "landcover",
+                 label = "VEPIIN")
+```
+
+ 
+```{r plot-raster}
+raster::plot(NLCD_2011)
+```
