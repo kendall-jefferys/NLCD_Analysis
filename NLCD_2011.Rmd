@@ -1,0 +1,22 @@
+---
+title: "NLCD_2011"
+author: "Kendall Jefferys"
+date: "10/18/2019"
+output: html_document
+---
+# Load packages
+```{r load-packages}
+library(sp)
+library(raster)
+library(rgdal)
+library(FedData)
+library(magrittr)
+```
+
+```{r polygon}
+# need to change location 
+vepPolygon <- polygon_from_extent(raster::extent(672800, 740000, 4102000, 4170000),
+                                  proj4string = "+proj=utm +datum=NAD83 +zone=12")
+```
+
+
